@@ -1,0 +1,16 @@
+#!/bin/bash
+env GOARCH=amd64 GOOS=darwin go build -o pm github.com/evgeny-klyopov/pack-mnemonic-app/cmd
+tar -cvzf pm.macos-amd64.tar.gz pm && mv pm.macos-amd64.tar.gz sources/
+rm pm
+
+env GOARCH=amd64 GOOS=linux go build -o pm github.com/evgeny-klyopov/pack-mnemonic-app/cmd
+tar -cvzf pm.linux-amd64.tar.gz pm && mv pm.linux-amd64.tar.gz sources/
+rm pm
+
+env GOARCH=amd64 GOOS=windows go build -o pm.exe github.com/evgeny-klyopov/pack-mnemonic-app/cmd
+tar -cvzf pm.windows-amd64.tar.gz pm.exe && mv pm.windows-amd64.tar.gz sources/
+rm pm.exe
+
+env GOARCH=arm64 GOOS=darwin go build -o pm github.com/evgeny-klyopov/pack-mnemonic-app/cmd
+tar -cvzf pm.macos-arm64.tar.gz pm && mv pm.macos-arm64.tar.gz sources/
+rm pm
