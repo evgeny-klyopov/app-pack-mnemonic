@@ -2,7 +2,7 @@
 Console application for pack mnemonic
 
 ### [Install](./docs/INSTALL.md)
-### How to work?
+### How it works?
 1. Convert mnemonic to number format by package [wordlist](https://github.com/tyler-smith/go-bip39/tree/master/wordlists)
 2. Converting a number (mnemonic) to a format %04d (example 23 -> 0023, 1455 -> 1455, 1 -> 0001)
 3. Joining all mnemonic numbers into a string and after remove leading zeros (base10)
